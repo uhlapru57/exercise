@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
      home: Scaffold(
       appBar: AppBar(
         title: const Text('APP BAR'),
@@ -34,7 +35,24 @@ class MyApp extends StatelessWidget {
         width: 500,
         height: 500,
         child: Image.asset('assets/images/img2.jpg')),
-      )
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+             ),
+             BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+             ),
+             BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+             ),
+        ],
+      ),
     ),
      
     );
